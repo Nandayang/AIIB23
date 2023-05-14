@@ -16,6 +16,6 @@ Register the challenge from https://codalab.lisn.upsaclay.fr/competitions/13076#
 ``` 
 2. Build the docker  
 ```docker build -t YOUR_TEAM_NAME .```
-3. Save the docker  
-```docker save YOUR_TEAM_NAME:latest -o teamname.tar.gz```
+3. Save the docker
+```docker save YOUR_TEAM_NAME:latest -o teamname_[T1 or T2].tar.gz```
 4. Send the packed docker and instructions to the organizers, please test the container file first before sending to us.
