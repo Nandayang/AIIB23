@@ -32,11 +32,7 @@ def evaluation_branch_metrics(fid,label, pred,refine=False):
     volume_sort = np.argsort(volume)
     large_cd = (cd == (volume_sort[-1] + 1)).astype(np.uint8)
     iou = compute_binary_iou(label, large_cd)
-    flag=-1
-    while iou < 0.1:
-        print(fid," failed cases, require post-processing")
-        large_cd = (cd == (volume_sort[flag-1] + 1)).astype(np.uint8)
-        iou = compute_binary_iou(label, large_cd)
+
     skeleton = skeletonize_3d(label)
     skeleton = (skeleton > 0)
     skeleton = skeleton.astype('uint8')
