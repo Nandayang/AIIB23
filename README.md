@@ -6,7 +6,9 @@ Airway-related quantitative imaging biomarkers (QIB) are crucial for examination
 Register the challenge from https://codalab.lisn.upsaclay.fr/competitions/13076#participate  
 **It is of note that you need to send the registeration form to the organizers.**
 ## How to pakage and submit docker files 
-1. Prepare the dockerfiles as the following structure:
+*** More details can be found [here](https://github.com/XiaodanXing/-AIIB23/tree/main/docker%20submission)***
+1. Prepare you python inference code
+2. Prepare all the container files as the following structure:
 ```
 ── Dockerdir
     ├── Dockerfile (this file includes your basic settings)
@@ -15,7 +17,7 @@ Register the challenge from https://codalab.lisn.upsaclay.fr/competitions/13076#
     └── predict.py
 ``` 
 2. Build the docker  
-```docker build -t YOUR_TEAM_NAME .```
+```docker build -f Dockerfile -t YOUR_TEAM_NAME .```
 3. Save the docker
-```docker save YOUR_TEAM_NAME:latest -o teamname_[T1 or T2].tar.gz```
+```docker save YOUR_TEAM_NAME:latest -o Teamname_TaskNO.tar.gz```
 4. Send the packed docker and instructions to the organizers, please test the container file first before sending to us.
